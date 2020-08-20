@@ -20,8 +20,9 @@ var nav_bar = new Vue({
         title: 'Tennor Lee',
         nav_items: [
             {id:1,value:'About'},
-            {id:2,value:'Blog'},
-            {id:3,value:'Contact'},
+            {id:2,value:'Projects'},
+            {id:3,value:'Blog'},
+            {id:4,value:'Contact'},
         ]
     }
 })

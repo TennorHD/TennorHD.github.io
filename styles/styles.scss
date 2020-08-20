@@ -45,4 +45,21 @@ a {
     text-decoration: none;
 }
 
-@import 'home'
+@import 'home';
+
+@media screen and (max-width: 1200px){
+    html {
+        font-size: 50%;
+    }
+
+    nav {
+        h1 {
+            flex: 1;
+        }
+        ul {
+            li {
+                margin-left: 5rem;
+            }
+        }
+    }
+}

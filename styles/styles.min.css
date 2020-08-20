@@ -189,4 +189,18 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+  nav h1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  nav ul li {
+    margin-left: 5rem;
+  }
+}
 /*# sourceMappingURL=styles.min.css.map */
