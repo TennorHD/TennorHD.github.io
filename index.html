@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <title>Tennor.io</title>
 </head>
 <body>
-    <div id="home">
-        {{ message }}
+    <div class="navigation-container">
+        <nav>
+            <h1>{{ title }}</h1>
+            <ul class="nav_buttons">
+                <li v-for='item in nav_items' :key='item.id'>
+                    {{item.value}}
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="home">
+        <img class="profile-picture" :src="prof_pic">
+        <h2><span class="breath">{{span_1}}</span>{{ page_title }}<span class="breath">{{span_2}}</span></h2>
+        <p class="subtitle">{{subtitle}}</p>
+        <ul class="logos">
+            <li v-for='logo in logos' :key="logo.id">
+                <a :href="logo.url" target="_blank"><img class="logo" :src="logo.img" alt=""></a>
+            </li>
+        </ul>
     </div>
     <script src="index.js"></script>
 </body>
