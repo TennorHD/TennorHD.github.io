@@ -15,20 +15,22 @@
             <h1>{{ title }}</h1>
             <ul class="nav_buttons">
                 <li v-for='item in nav_items' :key='item.id'>
-                    {{item.value}}
+                    <a href="#" v-bind:class="item.classname">{{item.value}}</a>
                 </li>
             </ul>
         </nav>
     </div>
     <div class="home">
-        <img class="profile-picture" :src="prof_pic">
-        <h2><span class="breath">{{span_1}}</span>{{ page_title }}<span class="breath">{{span_2}}</span></h2>
-        <p class="subtitle">{{subtitle}}</p>
-        <ul class="logos">
-            <li v-for='logo in logos' :key="logo.id">
-                <a :href="logo.url" target="_blank"><img class="logo" :src="logo.img" alt=""></a>
-            </li>
-        </ul>
+        <div class="landing">
+            <img class="profile-picture" :src="prof_pic">
+            <h2><span class="breath">{{span_1}}</span>{{ page_title }}<span class="breath">{{span_2}}</span></h2>
+            <p class="subtitle">{{subtitle}}</p>
+            <ul class="logos">
+                <li v-for='logo in logos' :key="logo.id">
+                    <a :href="logo.url" target="_blank"><img class="logo" :src="logo.img" alt=""></a>
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
