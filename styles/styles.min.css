@@ -7,22 +7,24 @@
 
 html {
   font-size: 62.5%;
-  color: white;
+  color: #0d2840;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Crimson Text', serif;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-family: 'Roboto Mono', monospace;
+  font-size: 3rem;
+  font-family: 'Crimson Text', serif;
   font-weight: lighter;
+  color: #f2f2f2;
 }
 
 h2 {
-  font-size: 8rem;
+  font-size: 5rem;
   font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
 }
 
 h3 {
@@ -34,34 +36,38 @@ h4 {
 }
 
 p {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 li {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 a {
-  color: white;
+  color: #f2f2f2;
   text-decoration: none;
 }
 
 .home {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
   width: 100%;
   height: 92vh;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    display: none;
+  }
+}
+
+.home .wave {
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+  width: 100%;
+  z-index: -1;
 }
 
 .home .landing {
@@ -78,14 +84,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 96%;
-  width: 98vw;
-  background: #bfb4aa;
+  min-height: 90vh;
+  margin: auto;
 }
 
 .home .landing .profile-picture {
   border-radius: 50%;
-  width: 20vw;
+  width: 23rem;
   height: auto;
   overflow: hidden;
   margin-bottom: 3rem;
@@ -133,7 +138,7 @@ a {
 }
 
 .home .landing .breath {
-  color: #d99282;
+  color: #d96704;
   -webkit-animation: breathing 2s ease-in-out 0s infinite;
           animation: breathing 2s ease-in-out 0s infinite;
   animation-direction: alternate-reverse;
@@ -141,26 +146,32 @@ a {
 
 @-webkit-keyframes breathing {
   from {
-    color: #d99282;
+    color: #d96704;
   }
   to {
-    color: rgba(217, 146, 130, 0);
+    color: rgba(217, 103, 4, 0);
   }
 }
 
 @keyframes breathing {
   from {
-    color: #d99282;
+    color: #d96704;
   }
   to {
-    color: rgba(217, 146, 130, 0);
+    color: rgba(217, 103, 4, 0);
   }
 }
 
 .navigation-container {
   width: 100%;
   height: 8vh;
-  background: black;
+  background: #010326;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-container {
+    display: none;
+  }
 }
 
 .navigation-container nav {
@@ -219,21 +230,77 @@ a {
   background: grey;
 }
 
-@media screen and (max-width: 1200px) {
+.mobile-container {
+  display: none;
+  overflow: hidden;
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.mobile-container .mob-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0rem;
+}
+
+.mobile-container .mob-header h1 {
+  color: #010326;
+  margin: 2rem 0rem;
+}
+
+.mobile-container .mob-header::after {
+  content: '';
+  display: block;
+  height: 0.09em;
+  min-width: 40vw;
+  background: -webkit-gradient(linear, right top, left top, from(white), color-stop(#F28322), to(white));
+  background: linear-gradient(to left, white, #F28322, white);
+}
+
+.mobile-container .buttons {
+  text-align: center;
+}
+
+.mobile-container .buttons li {
+  margin: 2rem 0rem;
+  list-style: none;
+}
+
+.mobile-container .buttons li a {
+  color: #010326;
+}
+
+@media only screen and (max-width: 768px) {
   html {
     font-size: 50%;
-  }
-  nav h1 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  nav ul li {
-    margin-left: 5rem;
-  }
-  .home .profile-picture {
-    width: 50vw;
-    height: auto;
   }
 }
 /*# sourceMappingURL=styles.min.css.map */
