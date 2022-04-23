@@ -198,10 +198,9 @@ section {
             line-height: 2rem;
         }
         .home-btns {
-            display: flex;
-            .btn-con {
-                margin-right: 1rem;
-            }
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
         }
     }
 }

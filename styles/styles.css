@@ -289,13 +289,11 @@ section {
 }
 
 .header-content .right-header .home-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header-content .right-header .home-btns .btn-con {
-  margin-right: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 /*About*/
@@ -1029,6 +1027,15 @@ section {
     font-size: 2.5rem !important;
     text-align: center;
     padding-top: 3rem;
+  }
+  .home-btns {
+    padding-top: 1rem;
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    gap: 1rem !important;
   }
   .header-content .left-header .image {
     margin: 0 auto;
