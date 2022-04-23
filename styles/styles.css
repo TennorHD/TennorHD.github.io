@@ -291,9 +291,8 @@ section {
 .header-content .right-header .home-btns {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  -ms-grid-columns: (0.5fr)[2];
+      grid-template-columns: repeat(2, 0.5fr);
 }
 
 /*About*/
@@ -1032,9 +1031,6 @@ section {
     padding-top: 1rem;
     -ms-grid-columns: (1fr)[1] !important;
         grid-template-columns: repeat(1, 1fr) !important;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
     gap: 1rem !important;
   }
   .header-content .left-header .image {
