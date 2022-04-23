@@ -199,7 +199,7 @@ section {
         }
         .home-btns {
             display: grid;
-            grid-template-columns: repeat(2, .5fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
@@ -543,9 +543,17 @@ section {
             }
         }
 
+        .contact-icons {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
+
         .contact-icon {
             display: flex;
-            margin-top: 2rem;
+            align-items: center;
+            gap: 1rem;
             .link {
                 display: flex;
                 align-items: center;

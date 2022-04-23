@@ -95,6 +95,22 @@
         padding-bottom: 6rem;
     }
 
+    .contact-icons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        .contact-icon {
+            padding-bottom: 1rem;
+            .link {
+                margin-right: 0 !important;
+            }
+        }
+        .btn-con{
+            align-self: center !important;
+        }
+    }
+
     .contact-content-con{
         flex-direction: column;
         .right-contact{
